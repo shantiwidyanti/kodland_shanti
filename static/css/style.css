@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+nav {
+    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+h1, h2, h3 {
+    color: #6d28d9;
+    text-shadow: 0 2px 4px rgba(109,40,217,0.1);
+}
+button, input[type="submit"] {
+    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #5b21b6 0%, #4c1d95 100%);
+    box-shadow: 0 4px 12px rgba(109,40,217,0.3);
+}
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(124,58,237,0.08);
+}
+table, th, td {
+    border: 1px solid #e9d5ff;
+}
+th {
+    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+    color: #fff;
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+tr:hover {
+    background-color: #f3e8ff;
+}
+.error {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+.success {
+    color: #388e3c;
+    margin-bottom: 10px;
+}

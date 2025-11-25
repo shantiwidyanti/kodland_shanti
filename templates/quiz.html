@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Halo, {{ user.nickname }}! Skor: {{ user.score }}</h2>
+<p><strong>Pertanyaan:</strong> {{ question.text }}</p>
+<form method="POST">
+    <input type="hidden" name="question_id" value="{{ question.id }}">
+    <input type="radio" name="answer" value="1" required> {{ question.option1 }}<br>
+    <input type="radio" name="answer" value="2"> {{ question.option2 }}<br>
+    <input type="radio" name="answer" value="3"> {{ question.option3 }}<br>
+    <input type="radio" name="answer" value="4"> {{ question.option4 }}<br><br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Selamat datang di Quiz</h1>
+<h3>(Hai semua :D ~shanti)!</h3>
+<div class="weather-widget">
+    <form method="GET" action="/" class="weather-form">
+        <label for="city">Cari Prakiraan Cuaca Kota :</label>
+        <input type="text" id="city" name="city" value="{{ city|default('') }}" placeholder="Contoh: Jakarta" required>
+        <button type="submit">Cari</button>
+    </form>
+    {% if forecast %}
+    <div class="weather-result">
+        <h3>Prakiraan Cuaca untuk <span style="color:#876ab5">{{ city|capitalize }}</span></h3>
+        <table class="weather-table">
+            <tr>
+                <th>Hari</th>
+                <th>Tanggal</th>
+                <th>Ikon</th>
+                <th>Suhu Siang (&deg;C)</th>
+                <th>Suhu Malam (&deg;C)</th>
+                <th>Deskripsi</th>
+            </tr>
+            {% for day in forecast %}
+            <tr>
+                <td>{{ day.day_name }}</td>
+                <td>{{ day.date }}</td>
+                <td>
+                    {% if day.icon %}
+                        <img src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="icon" width="48" height="48">
+                    {% else %}-{% endif %}
+                </td>
+                <td>{{ day.temp_day }}</td>
+                <td>{{ day.temp_night }}</td>
+                <td style="text-transform:capitalize">{{ day.description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
